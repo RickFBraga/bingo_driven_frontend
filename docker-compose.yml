@@ -1,14 +1,14 @@
 services:
   frontend:
     image: frontend
-    build: front-end/
+    build: .
     container_name: frontend
     ports:
       - 80:80
     networks:
       - mynetwork
-    depends_on:
-      - backend
+    
+
   pgadmin:
     container_name: pgadmin
     image: dpage/pgadmin4
@@ -21,7 +21,7 @@ services:
 
 networks:
   mynetwork:
-    name: mynetwork
+    driver: bridge
 
 volumes:
   myvolume:

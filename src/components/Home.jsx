@@ -6,7 +6,9 @@ import bingoLogo from '../assets/bingo-icon.png'
 
 function Home() {
   const year = new Date().getFullYear();
-  const backendUrl = import.meta.env.VITE_BACKEND;
+  const backendUrl = "https://bingo-driven-backend-bkqj.onrender.com"; 
+  // import.meta.env.VITE_BACKEND
+
   const navigate = useNavigate();
 
   async function initNewBingoGame() {

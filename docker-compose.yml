@@ -1,0 +1,27 @@
+services:
+  frontend:
+    image: frontend
+    build: front-end/
+    container_name: frontend
+    ports:
+      - 80:80
+    networks:
+      - mynetwork
+    depends_on:
+      - backend
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    ports:
+      - 8080:80
+    networks:
+      - mynetwork
+    environment:
+      - PGADMIN_DEFAULT_PASSWORD=16052021
+
+networks:
+  mynetwork:
+    name: mynetwork
+
+volumes:
+  myvolume:

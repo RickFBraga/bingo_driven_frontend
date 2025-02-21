@@ -6,7 +6,7 @@ import '../styles/App.css';
 import bingoLogo from '../assets/bingo-icon.png'
 
 function Game() {
-  const backendUrl = import.meta.env.VITE_BACKEND;
+  const backendUrl = "https://bingo-driven-backend-bkqj.onrender.com";
 
   const { id } = useParams();
   const [finished, setFinished] = useState(false);
